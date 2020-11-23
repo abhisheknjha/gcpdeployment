@@ -11,7 +11,7 @@ resources:
       autoDelete: true
       initializeParams:
         diskName: disk-learncicd-287805
-        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/rhel-7-v20201112
+        sourceImage: https://www.googleapis.com/compute/v1/projects/rhel-cloud/global/images/rhel-7-v20201112
     networkInterfaces:
     - network:  https://www.googleapis.com/compute/v1/projects/dryicepoc-242713/global/networks/default
       accessConfigs:
@@ -46,4 +46,4 @@ resources:
       ports: 
       - '8052'
     sourceRanges: 
-    - 0.0.0.0/0    
+    - 0.0.0.0/0 
