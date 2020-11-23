@@ -23,6 +23,8 @@ resources:
         value: |
           sudo apt-get update
           /bin/sleep 60
+          sudo wget https://storage.cloud.google.com/dryice-dmpoc/awx-installation.sh
+          ./awx-installation.sh
     tags:
       items:
       - http
