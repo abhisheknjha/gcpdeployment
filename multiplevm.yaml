@@ -43,7 +43,7 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        diskName: disk-window-287805
+        diskName: disk-window-287806
         sourceImage: https://www.googleapis.com/compute/v1/projects/windows-cloud/global/images/windows-server-2012-r2-dc-v20201110
     networkInterfaces:
     - network:  https://www.googleapis.com/compute/v1/projects/dryicepoc-242713/global/networks/default
@@ -75,7 +75,7 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        diskName: disk-window-287805
+        diskName: disk-window-287807
         sourceImage: https://www.googleapis.com/compute/v1/projects/windows-cloud/global/images/windows-server-2012-r2-dc-v20201110
     networkInterfaces:
     - network:  https://www.googleapis.com/compute/v1/projects/dryicepoc-242713/global/networks/default
