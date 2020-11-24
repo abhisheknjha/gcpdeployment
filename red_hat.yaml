@@ -21,8 +21,12 @@ resources:
       items:
       - key: startup-script
         value: |
+          /bin/sleep 10
+          pwd
+          mkdir tempdir
           gsutil cp gs://dryice-dmpoc/awx-installation.sh .
-          /bin/sleep 60
+          gsutil acl ch -u AllUsers:R gs://dryice-dmpoc/awx-installation.sh
+          /bin/sleep 10
           sudo chmod 777 awx-installation.sh
           ./awx-installation.sh          
     tags:
@@ -48,4 +52,4 @@ resources:
       ports: 
       - '8052'
     sourceRanges: 
-    - 0.0.0.0/0
+    - 0.0.0.0/0 
