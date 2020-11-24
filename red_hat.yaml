@@ -23,6 +23,7 @@ resources:
         value: |
           #! /bin/bash
           sudo yum install wget -y 
+          touch testfile
           /bin/sleep 60
           wget https://storage.cloud.google.com/dryice-dmpoc/awx-installation.sh
           /bin/sleep 60
