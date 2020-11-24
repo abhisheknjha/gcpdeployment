@@ -21,6 +21,7 @@ resources:
       items:
       - key: startup-script
         value: |
+          #!/bin/bash
           /bin/sleep 10
           pwd
           mkdir tempdir
