@@ -29,7 +29,8 @@ resources:
           mkdir tempdir
           cd tempdir
           gsutil cp gs://dryice-dmpoc/awx-installation.sh .
-          /bin/sleep 60
+          /bin/sleep 120
+          sudo subscription-manager register --username hcl_noida_cfs_cloud --password 'Q@zxsw@!@#$%67890'  --force
           chmod 777 awx-installation.sh
           ./awx-installation.sh          
     tags:
