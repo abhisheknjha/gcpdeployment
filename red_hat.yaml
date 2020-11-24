@@ -21,12 +21,12 @@ resources:
       items:
       - key: startup-script
         value: |
-          #!/bin/bash
           /bin/sleep 10
           pwd
-          mkdir tempdir
+          /bin/sleep 10
+          sudo mkdir tempdir
+          cd tempdir
           gsutil cp gs://dryice-dmpoc/awx-installation.sh .
-          gsutil acl ch -u AllUsers:R gs://dryice-dmpoc/awx-installation.sh
           /bin/sleep 10
           sudo chmod 777 awx-installation.sh
           ./awx-installation.sh          
