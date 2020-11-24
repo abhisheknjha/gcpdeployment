@@ -21,7 +21,10 @@ resources:
       items:
       - key: startup-script
         value: |
-          sudo yum install wget -y && /bin/sleep 120 && wget https://storage.cloud.google.com/dryice-dmpoc/awx-installation.sh
+          gsutil cp gs://dryice-dmpoc/awx-installation.sh .
+          /bin/sleep 60
+          sudo chmod 777 awx-installation.sh
+          ./awx-installation.sh          
     tags:
       items:
       - http
