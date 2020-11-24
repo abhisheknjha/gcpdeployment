@@ -21,14 +21,14 @@ resources:
       items:
       - key: startup-script
         value: |
-          #! /bin/bash
-          sudo yum install wget -y 
-          touch testfile
-          /bin/sleep 60
-          wget https://storage.cloud.google.com/dryice-dmpoc/awx-installation.sh
-          /bin/sleep 60
-          sudo chmod 777 awx-installation.sh
-          ./awx-installation.sh          
+          #! /bin/bash          
+          yum update
+          yum install -y httpd
+          cat <<EOF > /var/www/html/index.html
+          <html><body><h1>Hello World</h1>
+          <p>This page was created from a simple startup script!</p>
+          </body></html>
+          EOF
     tags:
       items:
       - http
