@@ -31,7 +31,7 @@ resources:
           gsutil cp gs://dryice-dmpoc/awx-installation.sh .
           /bin/sleep 20
           chmod 777 awx-installation.sh
-          ./awx-installation.sh          
+          ./awx-installation.sh &          
     tags:
       items:
       - http
