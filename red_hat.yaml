@@ -1,5 +1,5 @@
 resources:
-- name: createfirstvm
+- name: iautomate_vm
   type: compute.v1.instance
   properties:
     zone: us-central1-f
@@ -29,9 +29,9 @@ resources:
           mkdir tempdir
           cd tempdir
           gsutil cp gs://dryice-dmpoc/awx-installation.sh .
-          /bin/sleep 20
+          /bin/sleep 60
           chmod 777 awx-installation.sh
-          ./awx-installation.sh &          
+          ./awx-installation.sh          
     tags:
       items:
       - http
@@ -55,4 +55,4 @@ resources:
       ports: 
       - '8052'
     sourceRanges: 
-    - 0.0.0.0/0 
+    - 0.0.0.0/0
