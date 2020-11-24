@@ -1,5 +1,5 @@
 resources:
-- name: createWindowVM
+- name: windowvm
   type: compute.v1.instance
   properties:
     zone: us-central1-f
