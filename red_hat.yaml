@@ -11,7 +11,7 @@ resources:
       autoDelete: true
       initializeParams:
         diskName: disk-learncicd-287805
-        sourceImage: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20201112
+        sourceImage: https://www.googleapis.com/compute/v1/projects/rhel-cloud/global/images/rhel-7-v20201112
     networkInterfaces:
     - network:  https://www.googleapis.com/compute/v1/projects/dryicepoc-242713/global/networks/default
       accessConfigs:
@@ -20,15 +20,7 @@ resources:
     metadata:
       items:
       - key: startup-script
-        value: |
-          #! /bin/bash          
-          yum update
-          sudo yum install wget -y 
-          /bin/sleep 60
-          wget https://storage.cloud.google.com/dryice-dmpoc/awx-installation.sh
-          /bin/sleep 60
-          sudo chmod 777 awx-installation.sh
-          ./awx-installation.sh
+        value: gs://dryice-dmpoc/install.sh    
     tags:
       items:
       - http
@@ -52,4 +44,4 @@ resources:
       ports: 
       - '8052'
     sourceRanges: 
-    - 0.0.0.0/0 
+    - 0.0.0.0/0
