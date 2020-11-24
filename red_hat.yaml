@@ -20,7 +20,8 @@ resources:
     metadata:
       items:
       - key: startup-script
-        value: gs://dryice-dmpoc/install.sh    
+        value: |
+          sudo yum install wget -y  
     tags:
       items:
       - http
