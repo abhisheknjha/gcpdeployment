@@ -21,7 +21,7 @@ resources:
       items:
       - key: windows-startup-script-ps1
         value: |
-          cd  C:\Users\abhishek_jha
+          Start-Process powershell -Verb runAs
           mkdir testfile12
     tags:
       items:
