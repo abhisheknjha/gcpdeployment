@@ -19,10 +19,8 @@ resources:
         type: ONE_TO_ONE_NAT
     metadata:
       items:
-      - key: windows-startup-script-cmd
-        value: |
-          cd  C:\Users\abhishek_jha
-          mkdir testfile
+      - key: windows-startup-script-url
+        value: gs://dryice-dmpoc/powershel_script.ps1
     tags:
       items:
       - http
