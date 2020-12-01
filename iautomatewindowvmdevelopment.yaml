@@ -19,7 +19,7 @@ resources:
         type: ONE_TO_ONE_NAT
     metadata:
       items:
-      - key: windows-startup-script-ps1
+      - key: sysprep-specialize-script-ps1
         value: |
           cd  C:\Users\abhishek_jha
           mkdir testfile12
