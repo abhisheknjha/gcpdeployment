@@ -21,7 +21,6 @@ resources:
       items:
       - key: sysprep-specialize-script-ps1
         value: |
-          cd  C:\Users\abhishek_jha
           mkdir testfile12
     tags:
       items:
