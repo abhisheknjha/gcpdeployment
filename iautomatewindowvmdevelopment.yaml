@@ -1,5 +1,5 @@
 resources:
-- name: iautomatewindowvm1
+- name: iautomatetestwindowvmsql
   type: compute.v1.instance
   properties:
     zone: us-central1-f
@@ -11,7 +11,7 @@ resources:
       autoDelete: true
       initializeParams:
         diskName: disk-window-287805
-        sourceImage: https://www.googleapis.com/compute/v1/projects/windows-cloud/global/images/windows-server-2012-r2-dc-v20201110
+        sourceImage: https://www.googleapis.com/compute/v1/projects/windows-sql-cloud/global/images/sql-2017-web-windows-2019-dc-v20201110
     networkInterfaces:
     - network:  https://www.googleapis.com/compute/v1/projects/dryicepoc-242713/global/networks/default
       accessConfigs:
@@ -21,7 +21,10 @@ resources:
       items:
       - key: windows-startup-script-cmd
         value: |
-          mkdir testfile12
+          mkdir c:\TestGcp6
+          sqlcmd
+          create database iautomatedb
+          go
     tags:
       items:
       - http
