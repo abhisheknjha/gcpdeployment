@@ -22,8 +22,8 @@ resources:
       - key: windows-startup-script-cmd
         value: |
           sqlcmd
-          create database iautomatedb
-          go
+          CREATE DATABASE SERVER_METRICS
+          GO
     tags:
       items:
       - http
