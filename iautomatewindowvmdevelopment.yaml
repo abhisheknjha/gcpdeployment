@@ -21,7 +21,6 @@ resources:
       items:
       - key: windows-startup-script-cmd
         value: |
-          mkdir c:\TestGcp6
           sqlcmd
           create database iautomatedb
           go
